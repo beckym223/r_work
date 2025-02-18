@@ -28,13 +28,16 @@ create_corpus <- function(
 
   args[names(params)] <- params  # Update defaults with any provided params
   # Rename the parent_id field 
-  data <- data %>% rename(parent_id = !!args$parent_id_field) %>%
-             separate(doc_id, c("first", "year", "last"), sep = "-")%>% 
+  
+  duped_rows <- data %>% select(args$doc_id_field) %>% duplicated()
+  data <- data[!duped_rows,]
+  data <- data %>%
+    mutate(to_sep = doc_id)%>%
+             separate(to_sep, c("first", "year", "last"), sep = "-")%>% 
              select(-first, -last)%>%
              mutate(year = as.integer(year))
 
-  duped_rows <- data %>% select(args$doc_id_field) %>% duplicated()
-  data <- data[!duped_rows,]
+
   
   results$documents = data%>%rename(id = !!args$doc_id_field, text = !!args$text_field)%>%select(id,text)
   
@@ -74,12 +77,11 @@ create_corpus <- function(
   tokens_processed <- tokens %>%
     tokens_remove(stopwords("en"), padding = FALSE) %>%
     tokens_wordstem(language = quanteda_options("language_stemmer"))
-  
+
   # Extract collocations
   if (args$get_ngram){
     col <- textstat_collocations(tokens_processed,min_count = args$min_ngram_count, tolower = TRUE)
     results$colocation = col
-    results$tokens_processed = tokens_compound(tokens_processed, pattern = col)
   }
   
 
