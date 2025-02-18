@@ -2,3 +2,5 @@
 !.gitignore
 depricated/*
 *.rds
+.Rproj.user
+R_Work.Rproj
