@@ -1,0 +1,322 @@
+[
+	{
+		"remove_numbers": 1,
+		"split_on": "document",
+		"split_hyphens": 1,
+		"min_ngram_count": 0,
+		"doc_id_field": "doc_id",
+		"text_field": "full_doc_text",
+		"parent_id": "doc_id",
+		"get_ngram": false
+	},
+	{
+		"remove_numbers": 1,
+		"split_on": "document",
+		"split_hyphens": 1,
+		"min_ngram_count": 5,
+		"doc_id_field": "doc_id",
+		"text_field": "full_doc_text",
+		"parent_id": "doc_id",
+		"get_ngram": true
+	},
+	{
+		"remove_numbers": 1,
+		"split_on": "document",
+		"split_hyphens": 1,
+		"min_ngram_count": 10,
+		"doc_id_field": "doc_id",
+		"text_field": "full_doc_text",
+		"parent_id": "doc_id",
+		"get_ngram": true
+	},
+	{
+		"remove_numbers": 1,
+		"split_on": "document",
+		"split_hyphens": 1,
+		"min_ngram_count": 20,
+		"doc_id_field": "doc_id",
+		"text_field": "full_doc_text",
+		"parent_id": "doc_id",
+		"get_ngram": true
+	},
+	{
+		"remove_numbers": 1,
+		"split_on": "document",
+		"split_hyphens": 0,
+		"min_ngram_count": 0,
+		"doc_id_field": "doc_id",
+		"text_field": "full_doc_text",
+		"parent_id": "doc_id",
+		"get_ngram": false
+	},
+	{
+		"remove_numbers": 1,
+		"split_on": "document",
+		"split_hyphens": 0,
+		"min_ngram_count": 5,
+		"doc_id_field": "doc_id",
+		"text_field": "full_doc_text",
+		"parent_id": "doc_id",
+		"get_ngram": true
+	},
+	{
+		"remove_numbers": 1,
+		"split_on": "document",
+		"split_hyphens": 0,
+		"min_ngram_count": 10,
+		"doc_id_field": "doc_id",
+		"text_field": "full_doc_text",
+		"parent_id": "doc_id",
+		"get_ngram": true
+	},
+	{
+		"remove_numbers": 1,
+		"split_on": "document",
+		"split_hyphens": 0,
+		"min_ngram_count": 20,
+		"doc_id_field": "doc_id",
+		"text_field": "full_doc_text",
+		"parent_id": "doc_id",
+		"get_ngram": true
+	},
+	{
+		"remove_numbers": 1,
+		"split_on": "paragraph",
+		"split_hyphens": 1,
+		"min_ngram_count": 0,
+		"doc_id_field": "para_id",
+		"text_field": "paragraph",
+		"parent_id": "file",
+		"get_ngram": false
+	},
+	{
+		"remove_numbers": 1,
+		"split_on": "paragraph",
+		"split_hyphens": 1,
+		"min_ngram_count": 5,
+		"doc_id_field": "para_id",
+		"text_field": "paragraph",
+		"parent_id": "file",
+		"get_ngram": true
+	},
+	{
+		"remove_numbers": 1,
+		"split_on": "paragraph",
+		"split_hyphens": 1,
+		"min_ngram_count": 10,
+		"doc_id_field": "para_id",
+		"text_field": "paragraph",
+		"parent_id": "file",
+		"get_ngram": true
+	},
+	{
+		"remove_numbers": 1,
+		"split_on": "paragraph",
+		"split_hyphens": 1,
+		"min_ngram_count": 20,
+		"doc_id_field": "para_id",
+		"text_field": "paragraph",
+		"parent_id": "file",
+		"get_ngram": true
+	},
+	{
+		"remove_numbers": 1,
+		"split_on": "paragraph",
+		"split_hyphens": 0,
+		"min_ngram_count": 0,
+		"doc_id_field": "para_id",
+		"text_field": "paragraph",
+		"parent_id": "file",
+		"get_ngram": false
+	},
+	{
+		"remove_numbers": 1,
+		"split_on": "paragraph",
+		"split_hyphens": 0,
+		"min_ngram_count": 5,
+		"doc_id_field": "para_id",
+		"text_field": "paragraph",
+		"parent_id": "file",
+		"get_ngram": true
+	},
+	{
+		"remove_numbers": 1,
+		"split_on": "paragraph",
+		"split_hyphens": 0,
+		"min_ngram_count": 10,
+		"doc_id_field": "para_id",
+		"text_field": "paragraph",
+		"parent_id": "file",
+		"get_ngram": true
+	},
+	{
+		"remove_numbers": 1,
+		"split_on": "paragraph",
+		"split_hyphens": 0,
+		"min_ngram_count": 20,
+		"doc_id_field": "para_id",
+		"text_field": "paragraph",
+		"parent_id": "file",
+		"get_ngram": true
+	},
+	{
+		"remove_numbers": 0,
+		"split_on": "document",
+		"split_hyphens": 1,
+		"min_ngram_count": 0,
+		"doc_id_field": "doc_id",
+		"text_field": "full_doc_text",
+		"parent_id": "doc_id",
+		"get_ngram": false
+	},
+	{
+		"remove_numbers": 0,
+		"split_on": "document",
+		"split_hyphens": 1,
+		"min_ngram_count": 5,
+		"doc_id_field": "doc_id",
+		"text_field": "full_doc_text",
+		"parent_id": "doc_id",
+		"get_ngram": true
+	},
+	{
+		"remove_numbers": 0,
+		"split_on": "document",
+		"split_hyphens": 1,
+		"min_ngram_count": 10,
+		"doc_id_field": "doc_id",
+		"text_field": "full_doc_text",
+		"parent_id": "doc_id",
+		"get_ngram": true
+	},
+	{
+		"remove_numbers": 0,
+		"split_on": "document",
+		"split_hyphens": 1,
+		"min_ngram_count": 20,
+		"doc_id_field": "doc_id",
+		"text_field": "full_doc_text",
+		"parent_id": "doc_id",
+		"get_ngram": true
+	},
+	{
+		"remove_numbers": 0,
+		"split_on": "document",
+		"split_hyphens": 0,
+		"min_ngram_count": 0,
+		"doc_id_field": "doc_id",
+		"text_field": "full_doc_text",
+		"parent_id": "doc_id",
+		"get_ngram": false
+	},
+	{
+		"remove_numbers": 0,
+		"split_on": "document",
+		"split_hyphens": 0,
+		"min_ngram_count": 5,
+		"doc_id_field": "doc_id",
+		"text_field": "full_doc_text",
+		"parent_id": "doc_id",
+		"get_ngram": true
+	},
+	{
+		"remove_numbers": 0,
+		"split_on": "document",
+		"split_hyphens": 0,
+		"min_ngram_count": 10,
+		"doc_id_field": "doc_id",
+		"text_field": "full_doc_text",
+		"parent_id": "doc_id",
+		"get_ngram": true
+	},
+	{
+		"remove_numbers": 0,
+		"split_on": "document",
+		"split_hyphens": 0,
+		"min_ngram_count": 20,
+		"doc_id_field": "doc_id",
+		"text_field": "full_doc_text",
+		"parent_id": "doc_id",
+		"get_ngram": true
+	},
+	{
+		"remove_numbers": 0,
+		"split_on": "paragraph",
+		"split_hyphens": 1,
+		"min_ngram_count": 0,
+		"doc_id_field": "para_id",
+		"text_field": "paragraph",
+		"parent_id": "file",
+		"get_ngram": false
+	},
+	{
+		"remove_numbers": 0,
+		"split_on": "paragraph",
+		"split_hyphens": 1,
+		"min_ngram_count": 5,
+		"doc_id_field": "para_id",
+		"text_field": "paragraph",
+		"parent_id": "file",
+		"get_ngram": true
+	},
+	{
+		"remove_numbers": 0,
+		"split_on": "paragraph",
+		"split_hyphens": 1,
+		"min_ngram_count": 10,
+		"doc_id_field": "para_id",
+		"text_field": "paragraph",
+		"parent_id": "file",
+		"get_ngram": true
+	},
+	{
+		"remove_numbers": 0,
+		"split_on": "paragraph",
+		"split_hyphens": 1,
+		"min_ngram_count": 20,
+		"doc_id_field": "para_id",
+		"text_field": "paragraph",
+		"parent_id": "file",
+		"get_ngram": true
+	},
+	{
+		"remove_numbers": 0,
+		"split_on": "paragraph",
+		"split_hyphens": 0,
+		"min_ngram_count": 0,
+		"doc_id_field": "para_id",
+		"text_field": "paragraph",
+		"parent_id": "file",
+		"get_ngram": false
+	},
+	{
+		"remove_numbers": 0,
+		"split_on": "paragraph",
+		"split_hyphens": 0,
+		"min_ngram_count": 5,
+		"doc_id_field": "para_id",
+		"text_field": "paragraph",
+		"parent_id": "file",
+		"get_ngram": true
+	},
+	{
+		"remove_numbers": 0,
+		"split_on": "paragraph",
+		"split_hyphens": 0,
+		"min_ngram_count": 10,
+		"doc_id_field": "para_id",
+		"text_field": "paragraph",
+		"parent_id": "file",
+		"get_ngram": true
+	},
+	{
+		"remove_numbers": 0,
+		"split_on": "paragraph",
+		"split_hyphens": 0,
+		"min_ngram_count": 20,
+		"doc_id_field": "para_id",
+		"text_field": "paragraph",
+		"parent_id": "file",
+		"get_ngram": true
+	}
+]

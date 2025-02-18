@@ -1,0 +1,131 @@
+
+# Init
+- Load csv
+- Necessary columns:
+  - year
+  - text
+  - id
+  - parent_id (if applicable)
+- Raise error if any of these are missing
+```{r}
+library(quanteda)
+library("quanteda.textstats")
+library(dplyr)
+library(tidyverse)
+library(stm)
+
+data <- read.csv("data.csv")
+documents <- data$text
+metadata <- data$year
+data <- data %>%
+  separate(doc_id, c("first", "year", "last"), sep = "-")%>% 
+  select(-first, -last)%>%
+  mutate(year = as.integer(year))
+```
+# Preprocess: 
+```{r}
+
+```
+
+```{r}
+# processed <- stm::textProcessor(data$paragraph, metadata = select(data,year)) 
+
+params = list(
+  remove_numbers = TRUE,
+  parent_id_field = 'file',
+  doc_id_field = "para_id",
+  text_field = "paragraph",
+  split_hyphens = TRUE,
+  remove_numbers = TRUE
+  
+)
+corpus<-corpus(
+  data%>%
+    rename(parent_id = params$parent_id_field),
+  docid_field = params$doc_id_field,
+  text_field = params$text_field,
+  unique_docnames = TRUE,
+)
+tokens<-tokens(
+  corpus,
+  remove_punct =TRUE,
+  remove_symbols = TRUE,
+  remove_numbers = FALSE,
+  remove_url = FALSE,
+  remove_separators =,
+  split_hyphens = params$split_hyphens,
+  split_tags = FALSE,
+  include_docvars = FALSE,
+  padding = FALSE,
+  concatenator = "_",
+)
+tokens_stemmed<- tokens%>%tokens_remove(stopwords("en"),padding=FALSE) %>%
+      tokens_wordstem(language = quanteda_options("language_stemmer"))
+
+col <- tokens_stemmed |> 
+    tokens_remove(stopwords("en"),padding=FALSE) |> 
+      tokens_wordstem(language = quanteda_options("language_stemmer"))%>%
+    textstat_collocations(min_count = 5, tolower = TRUE)
+head(col)
+tokens_compounded <- tokens_compound(tokens_stemmed, pattern = col) 
+
+library(quanteda)
+library(dplyr)
+
+process_text <- function(data, params = list(
+  remove_numbers = TRUE,
+  parent_id_field = 'file',
+  doc_id_field = "para_id",
+  text_field = "paragraph",
+  split_hyphens = TRUE
+)) {
+  
+  # Rename the parent_id field
+  data <- data %>% rename(parent_id = !!params$parent_id_field)
+  
+  # Create a corpus
+  corpus <- corpus(
+    data,
+    docid_field = params$doc_id_field,
+    text_field = params$text_field,
+    unique_docnames = TRUE
+  )
+  
+  # Tokenize the corpus
+  tokens <- tokens(
+    corpus,
+    remove_punct = TRUE,
+    remove_symbols = TRUE,
+    remove_numbers = params$remove_numbers,
+    remove_url = FALSE,
+    remove_separators = TRUE,  # Fixed missing assignment
+    split_hyphens = params$split_hyphens,
+    split_tags = FALSE,
+    include_docvars = FALSE,
+    padding = FALSE,
+    concatenator = "_"
+  )
+  
+  # Stem tokens and remove stopwords
+  tokens_stemmed <- tokens %>%
+    tokens_remove(stopwords("en"), padding = FALSE) %>%
+    tokens_wordstem(language = quanteda_options("language_stemmer"))
+  
+  # Extract collocations
+  col <- tokens_stemmed |> 
+    tokens_remove(stopwords("en"), padding = FALSE) |> 
+    tokens_wordstem(language = quanteda_options("language_stemmer")) %>%
+    textstat_collocations(min_count = 5, tolower = TRUE)
+  
+  return(col)
+}
+
+
+
+process_text()
+
+
+
+
+```
+
