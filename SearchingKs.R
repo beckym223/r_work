@@ -7,7 +7,7 @@ library(stm)
 library(progressr)
 # Set up parallel execution with 8 cores
 
-results_metadata <- read_csv("~/R_Work/results/results_metadata.csv")%>%
+results_metadata <- read_csv("~/R_Work/aggregated_results/results_metadata.csv")%>%
   filter(split_on=="paragraph")
 
 get_topic_models <- function(id,
@@ -72,4 +72,4 @@ final_results <- results_df %>%
             by = "param_id")
 
 # Save the merged dataframe as CSV and RDS
-write_csv(final_results, "~/R_Work/results/topic_model_results_with_params.csv")
+write_csv(final_results, "~/R_Work/aggregated_results/topic_model_results_with_params.csv")
