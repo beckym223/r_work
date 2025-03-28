@@ -1,0 +1,37 @@
+doc_vocab_id,unit,trunc,ngram,lt,optimal_k
+doc_lemma_1gram_10lt,doc,lemma,1,10,12
+doc_lemma_1gram_1lt,doc,lemma,1,1,18
+doc_lemma_2gram_10lt,doc,lemma,2,10,16
+doc_lemma_2gram_1lt,doc,lemma,2,1,17
+doc_none_1gram_10lt,doc,none,1,10,19
+doc_none_1gram_1lt,doc,none,1,1,25
+doc_none_2gram_10lt,doc,none,2,10,12
+doc_none_2gram_1lt,doc,none,2,1,13
+doc_stem_1gram_10lt,doc,stem,1,10,22
+doc_stem_1gram_1lt,doc,stem,1,1,20
+doc_stem_2gram_10lt,doc,stem,2,10,20
+doc_stem_2gram_1lt,doc,stem,2,1,20
+page_lemma_1gram_10lt,page,lemma,1,10,15
+page_lemma_1gram_1lt,page,lemma,1,1,19
+page_lemma_2gram_10lt,page,lemma,2,10,15
+page_lemma_2gram_1lt,page,lemma,2,1,13
+page_none_1gram_10lt,page,none,1,10,8
+page_none_1gram_1lt,page,none,1,1,12
+page_none_2gram_10lt,page,none,2,10,"10, 11, 21, 20, 22"
+page_none_2gram_1lt,page,none,2,1,"8, 13, 27, 37, 74"
+page_stem_1gram_10lt,page,stem,1,10,19
+page_stem_1gram_1lt,page,stem,1,1,16
+page_stem_2gram_10lt,page,stem,2,10,"12, 7"
+page_stem_2gram_1lt,page,stem,2,1,"10, 11, 27"
+paragraph_lemma_1gram_10lt,paragraph,lemma,1,10,9
+paragraph_lemma_1gram_1lt,paragraph,lemma,1,1,9
+paragraph_lemma_2gram_10lt,paragraph,lemma,2,10,11
+paragraph_lemma_2gram_1lt,paragraph,lemma,2,1,"6, 11"
+paragraph_none_1gram_10lt,paragraph,none,1,10,14
+paragraph_none_1gram_1lt,paragraph,none,1,1,5
+paragraph_none_2gram_10lt,paragraph,none,2,10,13
+paragraph_none_2gram_1lt,paragraph,none,2,1,8
+paragraph_stem_1gram_10lt,paragraph,stem,1,10,"15, 10, 11"
+paragraph_stem_1gram_1lt,paragraph,stem,1,1,6
+paragraph_stem_2gram_10lt,paragraph,stem,2,10,14
+paragraph_stem_2gram_1lt,paragraph,stem,2,1,5
