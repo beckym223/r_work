@@ -15,6 +15,7 @@ chosen = c(
   "paragraph_none_1gram_1lt",
   "doc_none_1gram_10lt",
   "doc_lemma_1gram_1lt",
+  "doc_lemma_2gram_1lt",
   "doc_stem_1gram_1lt"
 )
 
